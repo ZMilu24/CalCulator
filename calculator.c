@@ -17,7 +17,9 @@ int* listReWriter(int* list, int length, int middleIndex) {
             temp[i-2] = list[i];
         }
     }
-    return(temp);
+    list = temp;
+    free(temp);
+    return(list);
 }
 
 float bracketsHandler(int index, int* list, int lenght) {
