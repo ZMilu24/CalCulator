@@ -81,13 +81,13 @@ float calculate(int* list, int lenght) {
             // default case
             if (list[i] == 3) {
                 // calculate the * and replace it
-                list[i] = list[i-1] * list[1+1];
+                list[i] = list[i-1] * list[i+1];
                 list = listReWriter(list,lenght,i);
                 lenght -= 2;
             }
             if (list[i] == 4) {
                 // calculate the / and replace it
-                list[i] = list[i-1] / list[1+1];
+                list[i] = list[i-1] / list[i+1];
                 list = listReWriter(list,lenght,i);
                 lenght -= 2;
             }
